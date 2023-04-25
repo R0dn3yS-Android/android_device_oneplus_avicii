@@ -14,7 +14,7 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 # Inherit from avicii device
 $(call inherit-product, device/oneplus/avicii/device.mk)
 
-PRODUCT_NAME := lineage_avicii
+PRODUCT_NAME := evolution_avicii
 PRODUCT_DEVICE := avicii
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
