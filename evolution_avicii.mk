@@ -8,17 +8,26 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit some common Evolution X stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+
 # Inherit from avicii device
 $(call inherit-product, device/oneplus/avicii/device.mk)
-
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_avicii
 PRODUCT_DEVICE := avicii
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := AC2003
+
+EVO_BUILD_TYPE := UNOFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GMS := true
+
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_ADAPTIVE_CHARGING := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_USES_AOSP_RECOVERY := true
 
 PRODUCT_SYSTEM_NAME := Nord
 PRODUCT_SYSTEM_DEVICE := Nord
